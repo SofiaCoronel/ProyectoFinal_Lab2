@@ -26,9 +26,9 @@ public class PanelTipoCono extends JPanel {
         miLabel = new JLabel(miTexto);
 
         miGrupoCono = new ButtonGroup();
-        miBotonAzucar = new JButton("Cono Azucar");
-        miBotonWaffle = new JButton("Cono Waffle");
-        miBotonPapel = new JButton("Cono Papel");
+        miBotonAzucar = new JButton(" Azucar = 19.99");
+        miBotonWaffle = new JButton(" Waffle = 19.99");
+        miBotonPapel = new JButton(" Papel = 0");
 
         addButtons();
         format();

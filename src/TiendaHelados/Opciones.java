@@ -34,16 +34,16 @@ public enum Opciones {;
             = String.format(MI_FORMATO, "Cono Papel:                            ", Costo.PAPEL);
 
     // cadena que representa la seleccion de sabores.
-    public static final String VAINILLA
+    public static final String VAINILLA2
             = String.format(MI_FORMATO, "Vainilla:                              ", Costo.VAINILLA);
 
-    public static final String FRUTILLA
+    public static final String FRUTILLA2
             = String.format(MI_FORMATO, "Frutilla:                               ", Costo.FRUTILLA);
 
-    public static final String CHOCOLATE
+    public static final String CHOCOLATE2
             = String.format(MI_FORMATO, "Chocolate:                              ", Costo.CHOCOLATE);
 
-    public static final String MANGO
+    public static final String MANGO2
             = String.format(MI_FORMATO, "Mango:                                  ", Costo.MANGO);
 
     // cadena que representa la seleccion de adicionales.

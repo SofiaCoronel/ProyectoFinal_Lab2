@@ -28,6 +28,8 @@ public class FrameTiendaHelados extends JFrame {
     // panel para los adicionales.
     private final PanelAdicionales miPanelR;
 
+    private final PanelSabores miPanelSB;
+
     // panel para la seccion de ordenar.
     private final Boton miPanelB;
 
@@ -44,6 +46,7 @@ public class FrameTiendaHelados extends JFrame {
         miPanelC = new CenterFrame(miOyentePrecios);
         miPanelR = new PanelAdicionales(miOyentePrecios);
         miPanelB = new Boton(miOyentePrecios);
+        miPanelSB = new PanelSabores(miOyentePrecios);
         miOyentePrecios.actualizarOrdenTotal();
 
         constGUI();
@@ -104,13 +107,18 @@ public class FrameTiendaHelados extends JFrame {
         private double miCostoSabor = Costo.VAINILLA;
 
         // seleccion de sabor para el formulario de pedido.
-        private String miSeleccionSabor = Opciones.VAINILLA;
+        private String miSeleccionSabor = Opciones.VAINILLA2;
 
         // acumulado de la seccion adicionales.
         private double miCostoAdicional = 0.0;
 
         // seleccion de sabor para el formulario de adicionales.
         private String miSeleccionAdicional = "";
+
+        private double miCostoAgregarSabor = 0.0;
+
+        private String miSeleccionSabores = "";
+
 
         // orden total
         private double miTotal = miCostoTamanio + miCostoCono + miCostoSabor + miCostoAdicional;
@@ -142,18 +150,22 @@ public class FrameTiendaHelados extends JFrame {
             } else if (fuente == miPanelC.PanelTipoCono.getBotonPapel()) {
                 miCostoCono = Costo.PAPEL;
                 miSeleccionCono = Opciones.PAPEL;
-            } else if (fuente == miPanelC.Sabores.getVaniBtn()) { // opciones de sabores.
+            } else if (fuente == miPanelC.Sabores.getVainillaBtn()) { // opciones de sabores.
                 miCostoSabor = Costo.VAINILLA;
-                miSeleccionSabor = Opciones.VAINILLA;
-            } else if (fuente == miPanelC.Sabores.getChocBtn()) {
+                miSeleccionSabores = Opciones.VAINILLA2;
+                actualizarCostoAdicSabor();
+            } else if (fuente == miPanelC.Sabores.getChocolateBtn()) {
                 miCostoSabor = Costo.CHOCOLATE;
-                miSeleccionSabor = Opciones.CHOCOLATE;
-            } else if (fuente == miPanelC.Sabores.getStrawBtn())  {
+                miSeleccionSabores = Opciones.CHOCOLATE2;
+                actualizarCostoAdicSabor();
+            } else if (fuente == miPanelC.Sabores.getFrutillaBtn())  {
                 miCostoSabor = Costo.FRUTILLA;
-                miSeleccionSabor = Opciones.FRUTILLA;
+                miSeleccionSabores = Opciones.FRUTILLA2;
+                actualizarCostoAdicSabor();
             } else if (fuente == miPanelC.Sabores.getMangoBtn()) {
                 miCostoSabor = Costo.MANGO;
-                miSeleccionSabor = Opciones.MANGO;
+                miSeleccionSabores = Opciones.MANGO2;
+                actualizarCostoAdicSabor();
             } else if (fuente == miPanelB.Centro.getOrderBtn()) {
                 // resumen del pedido.
                 orden();
@@ -183,7 +195,7 @@ public class FrameTiendaHelados extends JFrame {
                     + miSeleccionCono + "\n"
                     + "---------------------------\n"
                     + "Sabor:\n"
-                    + miSeleccionSabor + "\n"
+                    + miSeleccionSabores + "\n"
                     + "---------------------------\n"
                     + "Adicionales:\n"
                     + miSeleccionAdicional
@@ -200,7 +212,8 @@ public class FrameTiendaHelados extends JFrame {
 
         protected void actualizarOrdenTotal() {
             miTotal = miCostoTamanio + miCostoCono
-                    + miCostoSabor + miCostoAdicional;
+                    + miCostoSabor + miCostoAdicional +
+            miCostoAgregarSabor ;
             miPanelB.Centro.setTotal(String.format("%.2f", miTotal));
 
         }
@@ -231,6 +244,31 @@ public class FrameTiendaHelados extends JFrame {
                 miCostoAdicional += Costo.ADIC;
                 miSeleccionAdicional += Opciones.MANZANA;
             }
+
+        }
+        private void actualizarCostoAdicSabor() {
+            // restablecer el costo de los sobores.
+            miCostoAgregarSabor = 0.0;
+            miSeleccionSabores = "";
+
+            // si se selecciona la mezcla, agrega el costo.
+            if (miPanelSB.getVainillaBtn().isSelected()) {
+                miCostoAgregarSabor += Costo.VAINILLA;
+                miSeleccionSabores += Opciones.VAINILLA2;
+            }
+            if (miPanelSB.getChocolateBtn().isSelected()) {
+                miCostoAgregarSabor += Costo.CHOCOLATE;
+                miSeleccionSabores += Opciones.CHOCOLATE2;
+            }
+            if (miPanelSB.getFrutillaBtn().isSelected()) {
+                miCostoAgregarSabor += Costo.FRUTILLA;
+                miSeleccionSabores += Opciones.FRUTILLA2;
+            }
+            if (miPanelSB.getMangoBtn().isSelected()) {
+                miCostoAgregarSabor += Costo.MANGO;
+                miSeleccionSabores += Opciones.MANGO2;
+            }
+
         }
     }
 }

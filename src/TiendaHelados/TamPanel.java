@@ -24,7 +24,7 @@ public class TamPanel extends JPanel {
             {"N°1 (12 cm)", "N°2 (15 cm)", "N°3 (18 cm)"};
 
 
-    public TamPanel(final FrameTiendaHelados.CambiadorPrecios theListener) {
+    public TamPanel(FrameTiendaHelados.CambiadorPrecios theListener) {
         super();
         // layout.
         setLayout(new BoxLayout(this, 1));

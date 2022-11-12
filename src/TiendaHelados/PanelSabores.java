@@ -12,15 +12,15 @@ public class PanelSabores extends JPanel {
 
     private String miTexto;
 
-    private final JRadioButton VainillaBtn;
+    private final JCheckBox VainillaBtn;
 
-    private  final JRadioButton ChocolateBtn;
+    private  final JCheckBox ChocolateBtn;
 
-    private final JRadioButton FrutillaBtn;
+    private final JCheckBox FrutillaBtn;
 
-    private final JRadioButton MangoBtn;
+    private final JCheckBox MangoBtn;
 
-    private final ButtonGroup myGrupo;
+    //private final ButtonGroup myGrupo;
 
     // constructor.
     public PanelSabores(final FrameTiendaHelados.CambiadorPrecios theListener) {
@@ -32,11 +32,11 @@ public class PanelSabores extends JPanel {
         miEtiqueta = new JLabel(miTexto);
 
         // instanciamos los botones.
-        myGrupo = new ButtonGroup();
-        VainillaBtn = new JRadioButton("Vainilla", true);
-        ChocolateBtn = new JRadioButton("Chocolate");
-        FrutillaBtn = new JRadioButton("Frutilla");
-        MangoBtn = new JRadioButton("Mango");
+        //myGrupo = new ButtonGroup();
+        VainillaBtn = new JCheckBox("Vainilla = 0");
+        ChocolateBtn = new JCheckBox("Chocolate = 40.0");
+        FrutillaBtn = new JCheckBox("Frutilla = 50.0");
+        MangoBtn = new JCheckBox("Mango = 80.50");
 
         addElements();
         addListeners(theListener);
@@ -50,10 +50,12 @@ public class PanelSabores extends JPanel {
     }
 
     private void addElements() {
-        myGrupo.add(VainillaBtn);
+        /*myGrupo.add(VainillaBtn);
         myGrupo.add(FrutillaBtn);
         myGrupo.add(ChocolateBtn);
         myGrupo.add(MangoBtn);
+
+         */
 
         // añadimos los elementos al panel.
         add(miEtiqueta);
@@ -62,10 +64,10 @@ public class PanelSabores extends JPanel {
         add(ChocolateBtn);
         add(MangoBtn);
 
-        formato();
+
     }
 
-    private void formato() {
+    /*private void formato() {
 
         // establecemos tamaño a los botones.
 
@@ -84,36 +86,36 @@ public class PanelSabores extends JPanel {
         MangoBtn.setMaximumSize(max);
         MangoBtn.setMinimumSize(min);
 
-        /*
+
         set background color for flavor buttons
         VainillaBtn.setBackground(Color.WHITE);
         FrutillaBtn.setBackground(Color.DARK_GRAY);
         ChocolateBtn.setBackground(Color.RED);
         MangoBtn.setBackground(Color.ORANGE);
-         */
 
-        /*
         set text colors for flavor buttons
         VainillaBtn.setForeground(Color.GRAY);
         FrutillaBtn.setForeground(Color.GREEN);
         ChocolateBtn.setForeground(Color.BLUE);
         MangoBtn.setForeground(Color.MAGENTA);
-         */
-    }
 
-    public JRadioButton getVaniBtn() {
+    }*/
+
+
+    public JCheckBox getVainillaBtn() {
         return VainillaBtn;
     }
 
-    public JRadioButton getChocBtn() {
+    public JCheckBox getChocolateBtn() {
         return ChocolateBtn;
     }
 
-    public JRadioButton getStrawBtn() {
+    public JCheckBox getFrutillaBtn() {
         return FrutillaBtn;
     }
 
-    public JRadioButton getMangoBtn() {
+
+    public JCheckBox getMangoBtn() {
         return MangoBtn;
     }
 }

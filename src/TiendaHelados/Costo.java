@@ -12,7 +12,7 @@ public enum Costo {;
     // costo - sabores.
     public static final double VAINILLA = 0.00;
 
-    public static final double CHOCOLATE = 0.00;
+    public static final double CHOCOLATE = 40.00;
 
     public static final double FRUTILLA = 50.00;
 
