@@ -94,9 +94,9 @@ public class shop extends javax.swing.JFrame implements MouseListener{
         jTable1.setSelectionBackground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setViewportView(jTable1);
 
-        passion_fruit.setIcon(new javax.swing.ImageIcon("F:\\Sofia\\MANGO.png")); // NOI18N
+        passion_fruit.setIcon(new javax.swing.ImageIcon("C:\\MANGO.png")); // NOI18N
 
-        amarena_cherry.setIcon(new javax.swing.ImageIcon("F:\\Sofia\\COOKIES.png")); // NOI18N
+        amarena_cherry.setIcon(new javax.swing.ImageIcon("C:\\COOKIES.png")); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         jLabel5.setText("TOTAL");
@@ -104,27 +104,27 @@ public class shop extends javax.swing.JFrame implements MouseListener{
         txtsub.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
         txtsub.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        rum_raisin.setIcon(new javax.swing.ImageIcon("F:\\Sofia\\CHOCOBLANCO.png")); // NOI18N
+        rum_raisin.setIcon(new javax.swing.ImageIcon("C:\\CHOCOBLANCO.png")); // NOI18N
         rum_raisin.setMaximumSize(new java.awt.Dimension(307, 645));
 
-        butterscotch_budino.setIcon(new javax.swing.ImageIcon("F:\\Sofia\\DULCEDELECHE.png")); // NOI18N
+        butterscotch_budino.setIcon(new javax.swing.ImageIcon("C:\\DULCEDELECHE.png")); // NOI18N
         butterscotch_budino.setMaximumSize(new java.awt.Dimension(307, 645));
 
-        mixed_berry.setIcon(new javax.swing.ImageIcon("F:\\Sofia\\FRUTILLA.png")); // NOI18N
+        mixed_berry.setIcon(new javax.swing.ImageIcon("C:\\FRUTILLA.png")); // NOI18N
         mixed_berry.setMaximumSize(new java.awt.Dimension(307, 645));
 
-        chocolate_fondente.setIcon(new javax.swing.ImageIcon("F:\\Sofia\\CHOCOLATE.png")); // NOI18N
+        chocolate_fondente.setIcon(new javax.swing.ImageIcon("C:\\CHOCOLATE.png")); // NOI18N
         chocolate_fondente.setMaximumSize(new java.awt.Dimension(307, 645));
 
-        italian_custard.setIcon(new javax.swing.ImageIcon("F:\\Sofia\\DULCEGRANIZADO.png")); // NOI18N
+        italian_custard.setIcon(new javax.swing.ImageIcon("C:\\DULCEGRANIZADO.png")); // NOI18N
         italian_custard.setMaximumSize(new java.awt.Dimension(307, 645));
 
         roasted_banana.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         roasted_banana.setForeground(new java.awt.Color(135, 99, 63));
-        roasted_banana.setIcon(new javax.swing.ImageIcon("F:\\Sofia\\BANANA.png")); // NOI18N
+        roasted_banana.setIcon(new javax.swing.ImageIcon("C:\\BANANA.png")); // NOI18N
         roasted_banana.setMaximumSize(new java.awt.Dimension(307, 645));
 
-        bourbon_vanillabean.setIcon(new javax.swing.ImageIcon("F:\\Sofia\\VAINILLA.png")); // NOI18N
+        bourbon_vanillabean.setIcon(new javax.swing.ImageIcon("C:\\VAINILLA.png")); // NOI18N
         bourbon_vanillabean.setMaximumSize(new java.awt.Dimension(307, 645));
 
         jLabel2.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
